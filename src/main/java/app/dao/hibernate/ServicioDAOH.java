@@ -22,7 +22,7 @@ public class ServicioDAOH extends BaseHibernateDAO implements ServicioDAO{
     }
 
     public Servicio get(Servicio t) {
-         Criteria criteria = this.getSession().createCriteria(Servicio.class);
+        Criteria criteria = this.getSession().createCriteria(Servicio.class);
         criteria.add(Restrictions.eq("id", t.getId()));
         return (Servicio) criteria.uniqueResult();
         
